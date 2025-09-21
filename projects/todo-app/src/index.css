@@ -1,68 +1,84 @@
+/* main.css - Basic CSS with Color Variables */
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Primary Colors */
+  --primary-blue: #2575fc;
+  --primary-blue-hover: #1b5ed8;
+  --primary-purple: #6a11cb;
+  
+  /* Background Colors */
+  --bg-gradient: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+  
+  /* Card/Surface Colors */
+  --surface-light: rgba(255, 255, 255, 0.85);
+  --surface-dark: rgba(25, 25, 25, 0.85);
+  --surface-secondary-light: rgba(255, 255, 255, 0.7);
+  --surface-secondary-dark: rgba(50, 50, 50, 0.7);
+  
+  /* Text Colors */
+  --text-primary-light: #1a1a1a;
+  --text-primary-dark: #f5f5f5;
+  --text-secondary-light: #666666;
+  --text-secondary-dark: #cccccc;
+  
+  /* Border Colors */
+  --border-light: #e0e0e0;
+  --border-dark: #404040;
+  --border-focus: var(--primary-blue);
+  
+  /* Status Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: var(--primary-blue);
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-heavy: rgba(0, 0, 0, 0.25);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Base Reset */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Body Defaults */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary-light);
+  background: var(--bg-light);
+  transition: all 0.3s ease;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Dark Theme */
+body.dark {
+  color: var(--text-primary-dark);
+  background: var(--bg-dark);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+/* Utility Classes */
+.text-primary { color: var(--text-primary-light); }
+.text-secondary { color: var(--text-secondary-light); }
+.bg-primary { background: var(--primary-blue); }
+.bg-surface { background: var(--surface-light); }
+
+body.dark .text-primary { color: var(--text-primary-dark); }
+body.dark .text-secondary { color: var(--text-secondary-dark); }
+body.dark .bg-surface { background: var(--surface-dark); }
