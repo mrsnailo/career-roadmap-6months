@@ -1,9 +1,13 @@
 import "./App.css";
+import TodoCard from "./components/TodoCard";
 
 function App() {
   return (
     <>
-      <h1> The ultimate to-do </h1>
+      {/* main layout */}
+      <div className="main-background">
+        <TodoCard />
+      </div>
     </>
   );
 }
