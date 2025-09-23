@@ -2,6 +2,7 @@ import React from "react";
 import moon from "../../assets/icons/moon.svg";
 import sun from "../../assets/icons/sun.svg";
 import sparkles from "../../assets/icons/sparkles.svg";
+import cross from "../../assets/icons/cross.svg";
 
 type IconProps = {
   size: number;
@@ -17,4 +18,8 @@ export const Sun: React.FC<IconProps> = ({ size }) => (
 
 export const Sparkles: React.FC<IconProps> = ({ size }) => (
   <img src={sparkles} alt="Sparkles Icon" width={size} height={size} />
+);
+
+export const Cross: React.FC<IconProps> = ({ size }) => (
+  <img src={cross} alt="Cross Icon" width={size} height={size} />
 );

@@ -153,6 +153,32 @@ p {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
+/* todo items  */
+.todo-items {
+  margin: 20px 0;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-light);
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin: 10px 0px;
+}
+
+.todo-item .icon {
+  display: flex;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.todo-item:hover .icon {
+  opacity: 1;
+}
+
 /* Utility Classes */
 .text-primary {
   color: var(--text-primary-light);
