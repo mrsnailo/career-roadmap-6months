@@ -87,9 +87,7 @@ p {
   margin: 2rem auto;
   padding: 1.5rem;
   border-radius: 12px;
-  background: var(--surface-light);
   box-shadow: 0 4px 6px var(--shadow-medium);
-  opacity: 0.95;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -115,7 +113,6 @@ p {
 .intro .title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary-light);
 }
 
 /* card form styles  */
@@ -158,11 +155,11 @@ p {
 .todo-items {
   margin: 20px 0;
 }
+
 .todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-light);
   padding: 10px 20px;
   border-radius: 12px;
   margin: 10px 0px;
@@ -193,6 +190,10 @@ p {
   background: var(--surface-light);
 }
 
+.surface-secondary {
+  background: var(--surface-secondary-light);
+}
+
 body.dark .text-primary {
   color: var(--text-primary-dark);
 }
@@ -201,4 +202,8 @@ body.dark .text-secondary {
 }
 body.dark .bg-surface {
   background: var(--surface-dark);
+}
+
+body.dark .surface-secondary {
+  background: var(--surface-secondary-dark);
 }

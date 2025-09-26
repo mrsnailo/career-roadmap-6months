@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
-import { Sparkles, Sun } from "./ui/MyIcons";
+import { Moon, Sparkles, Sun } from "./ui/MyIcons";
+import { getSavedTheme, toogleTheme, applyTheme } from "../utils/Theme";
+import type { Theme } from "../utils/Theme";
 
 const initialTaskList = [
   {
@@ -15,6 +17,19 @@ const initialTaskList = [
 
 const TodoCard: React.FC = () => {
   const [taskList, updateTaskList] = useState(initialTaskList);
+  const [theme, setTheme] = useState<Theme>("light");
+
+  // theme related effect
+  useEffect(() => {
+    const saved = getSavedTheme();
+    setTheme(saved);
+    applyTheme(saved);
+  }, []);
+
+  const handleToggle = () => {
+    toogleTheme();
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
 
   const addTaskHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,15 +52,15 @@ const TodoCard: React.FC = () => {
   };
 
   return (
-    <div className="todo-card">
+    <div className="todo-card bg-surface">
       {/* header part */}
       <div className="card-head">
         <div className="intro">
           <Sparkles size={32} />
-          <span className="title">To-do</span>
+          <span className="title text-primary">To-do</span>
         </div>
-        <div className="theme-toggle">
-          <Sun size={32} />{" "}
+        <div className="theme-toggle" onClick={handleToggle}>
+          {theme === "light" ? <Sun size={32} /> : <Moon size={32} />}
         </div>
       </div>
       {/* card form */}

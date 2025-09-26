@@ -9,7 +9,7 @@ type TodoItemProps = {
 const TodoItem: React.FC<TodoItemProps> = ({ id, task, removeTask }) => {
   return (
     <>
-      <div className="todo-item">
+      <div className="todo-item  surface-secondary">
         <div className="task">{task}</div>
         <div
           className="icon"
