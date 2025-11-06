@@ -45,7 +45,6 @@
 
 ## 🔗 Links
 
-* **Commits:** [https://github.com/USERNAME/career-roadmap-6months/commits/main](https://github.com/USERNAME/career-roadmap-6months/commits/main)
 * **Todo App Code:** `../projects/todo-app`
 
 ---
