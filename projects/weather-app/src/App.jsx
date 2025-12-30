@@ -106,7 +106,7 @@ function App() {
                         </div>
                       ))}
                     {!isLoading && Array.isArray(data) && data.length === 0 && (
-                      <p className="text-gray-400">No result found...</p>
+                      <p>No result found...</p>
                     )}
                   </div>
                 </div>
