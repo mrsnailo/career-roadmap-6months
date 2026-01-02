@@ -74,8 +74,8 @@ function App() {
               </div>
 
               {isFocused && (
-                <div className="search-result-box absolute top-full left-0 w-full mt-2 z-50 max-h-[400px] overflow-y-scroll">
-                  <div className="glass-card opacity-100 p-5 shadow-lg">
+                <div className="search-result-box absolute top-full left-0 w-full mt-2 z-50 max-h-[400px]">
+                  <div className="glass-card opacity-100 p-5 shadow-lg overflow-y-scroll">
                     {isLoading && (
                       <div className="w-full h-50 flex justify-center items-center">
                         <HashLoader color="#1A7595" />

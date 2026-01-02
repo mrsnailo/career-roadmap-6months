@@ -44,7 +44,7 @@
 
 ---
 
-## ✅ End of Week 1 Checklist
+## ✅ End of Week 2 Checklist
 
 
 

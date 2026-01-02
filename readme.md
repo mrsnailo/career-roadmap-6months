@@ -13,8 +13,8 @@ I’m tracking my weekly tasks, learning, and project progress here:
 
 | Week | Focus | Status | Roadmap Link |
 |------|-------|--------|--------------|
-| 1    | React basics + Todo App | ⬜ Pending | [Week 1](roadmap/week-01.md) |
-| 2    | React Hooks + Weather App | ⬜ Pending | [Week 2](roadmap/week-02.md) |
+| 1    | React basics + Todo App | ✅ Completed | [Week 1](roadmap/week-01.md) |
+| 2    | React Hooks + Weather App | ✅ Completed | [Week 2](roadmap/week-02.md) |
 | 3    | Next.js basics + Blog App | ⬜ Pending | [Week 3](roadmap/week-03.md) |
 | 4    | Next.js + MongoDB CRUD Task Manager | ⬜ Pending | [Week 4](roadmap/week-04.md) |
 | 5    | API Routes + Pagination/Filter | ⬜ Pending | [Week 5](roadmap/week-05.md) |
